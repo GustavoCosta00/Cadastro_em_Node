@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tela_admin.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TELA DO ADMIN</h1>
+
+    <section class="metodos_admin">
+        <article class="add_usuario">
+            <div class="bg_none">
+                <h3>ADICIONAR USUÁRIO</h3>
+            </div>
+            <form action="/usuario" method="post" class="bg_none">
+                <div class="bg_none">
+                    <label for="" class="bg_none label">Nome do usuário</label>
+                    <br>
+                    <input type="text" name="nome" id="" class="bg_none input">
+                </div>
+                <div class="bg_none">
+                    <label for="" class="bg_none label">Email</label>
+                    <br>
+                    <input type="text" name="email" id="" class="bg_none input">
+                </div>
+                <div class="bg_none">
+                    <label for="" class="bg_none label">Caso seja funcionario marque esse caixa:</label>
+                    <br>
+                    <input type="checkbox" name="isFunc" class="bg_none checkbox"/>
+                </div>
+
+                <input type="submit"  value="REGISTRAR" name="registrar" id="submit">
+            </form>
+        </article>
+
+
+        <article class="bg_none registros_sair">
+            <div class="bg_none btn">
+               <a href="/admin/ver_usuarios"><h3 class="btn_letra">VER TODOS OS USUÁRIOS</h3></a>
+            </div>
+
+            <div class="bg_none btn">
+                <a href="/"><h3 class="btn_letra">SAIR DO SISTEMA</h3></a>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

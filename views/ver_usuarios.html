@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usuários Cadastrados</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Funcionário</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-usuarios">
+            <!-- Os dados serão preenchidos aqui -->
+        </tbody>
+    </table>
+
+    <script>
+        // Faz uma requisição para buscar os dados dos usuários
+        fetch('/admin/ver_usuarios?json=true') // Use a rota correta
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erro ao carregar os usuários");
+                }
+                return response.json(); // Converte a resposta em JSON
+            })
+            .then(data => {
+                const tabela = document.getElementById("tabela-usuarios");
+
+                // Preenche a tabela com os dados dos usuários
+                data.forEach(usuario => {
+                    const tr = document.createElement("tr");
+
+                    // Nome
+                    const tdNome = document.createElement("td");
+                    tdNome.textContent = usuario.name;
+                    tr.appendChild(tdNome);
+
+                    // Email
+                    const tdEmail = document.createElement("td");
+                    tdEmail.textContent = usuario.email;
+                    tr.appendChild(tdEmail);
+
+                    // Funcionário
+                    const tdIsFunc = document.createElement("td");
+                    tdIsFunc.textContent = usuario.isFunc ? "Sim" : "Não";
+                    tr.appendChild(tdIsFunc);
+
+                    // Adiciona a linha na tabela
+                    tabela.appendChild(tr);
+                });
+            })
+            .catch(err => {
+                console.error("Erro ao buscar usuários:", err);
+            });
+    </script>
+</body>
+</html>

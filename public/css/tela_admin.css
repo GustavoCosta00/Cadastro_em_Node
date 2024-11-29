@@ -1,0 +1,115 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(234, 234, 234);
+}
+
+h1{
+    text-align: center;
+    margin-top: 4rem;
+    color: rgb(130, 27, 189);
+}
+
+form{
+    text-align: center;
+}
+
+h3{
+    margin-top: 3rem;
+    color: rgb(130, 27, 189);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.00);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.metodos_admin{
+    display: flex;
+    justify-content: space-evenly;
+    height: 500px;
+    margin-top: 4rem;
+}
+
+.add_usuario{
+    width: 500px;
+    border: 3px solid rgb(130, 27, 189);
+    background: rgba(0, 0, 0, 0.00);
+}
+
+.bg_none{
+    background: rgba(0, 0, 0, 0.00);
+    margin-top: 1.6rem;
+}
+
+
+.input{
+   width: 300px;
+   height: 40px;
+   border: 2px solid rgb(130, 27, 189);
+   border-radius: 3px;
+   color: rgb(12, 1, 18);
+   text-align: center;
+   font-size: 20px;
+}
+
+.input:focus{
+    border: 3px solid rgb(130, 27, 189);
+}
+
+.label{
+    color: rgb(130, 27, 189);
+}
+
+.checkbox{
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+
+
+.registros_sair{
+    margin-top: 6rem;
+}
+
+.btn{
+    width: 400px;
+    height: 70px;
+    background-color: rgb(130, 27, 189);
+    text-align: center;
+    line-height: 70px;
+    border-radius: 100px;
+}
+
+.btn_letra{
+    color: white;
+}
+
+.btn:hover{
+    background-color: rgb(99, 13, 149);
+    transition: 0.3s ease-out;
+}
+
+#submit{
+    width: 300px;
+    height: 50px;
+    margin-left: auto;
+    margin-top: 2rem;
+    border-radius: 30px;
+    border: 2px solid rgb(130, 27, 189);
+    background: rgb(231, 231, 231);
+
+    color: rgb(36, 36, 36);
+}
+
+#submit:hover{
+    background: rgb(130, 27, 189);
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    color: white;
+}
